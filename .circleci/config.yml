@@ -47,6 +47,13 @@ jobs:
     docker:
       - image: circleci/python:3.7
 
+  test-py38:
+    <<: *test-steps
+    docker:
+      - image: circleci/python:3.8
+    environment:
+      TOXFACTOR: py38
+
   test-py37:
     <<: *test-steps
     docker:
@@ -75,6 +82,10 @@ workflows:
     jobs:
       - lint
       - dist:
+          requires:
+            - lint
+
+      - test-py38:
           requires:
             - lint
 

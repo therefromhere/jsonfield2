@@ -3,7 +3,8 @@ Changes
 
 v3.0.3 (unreleased)
 ^^^^^^^^^^^^^^^^^^^
-- Add Django 3.0 support, drop Python 3.4
+- Add Python 3.8 & Django 3.0 support
+- Drop Python 3.4 support
 
 v3.0.2 12/21/2018
 ^^^^^^^^^^^^^^^^^
